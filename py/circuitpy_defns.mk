@@ -248,6 +248,9 @@ endif
 ifeq ($(CIRCUITPY_ONEWIREIO),1)
 SRC_PATTERNS += onewireio/%
 endif
+ifeq ($(CIRCUITPY_EGOBUS),1)
+SRC_PATTERNS += egobus/%
+endif
 ifeq ($(CIRCUITPY_OS),1)
 SRC_PATTERNS += os/%
 endif
@@ -617,6 +620,7 @@ SRC_SHARED_MODULE_ALL = \
 	msgpack/__init__.c \
 	onewireio/__init__.c \
 	onewireio/OneWire.c \
+	egobus/__init__.c \
 	os/__init__.c \
 	paralleldisplay/ParallelBus.c \
 	qrio/__init__.c \
